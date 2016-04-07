@@ -41,6 +41,7 @@ function startServer() {
     var cname = ws._socket.remoteAddress + ":" +
                 ws._socket.remotePort;
     sendToClient("print", {"message": "["  + cname + " connected.]"});
+    sendToClient("log", {"message": "-------------------", "topic": "system"})
     remoteConnection = ws;
 
     ws.on('message', function incoming(message) {
