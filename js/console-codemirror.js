@@ -14,9 +14,10 @@ function remoteEval(code) {
 }
 
 function replLog(message, topic) {
-    $('<div class="log-' + topic + '">[' + topic + '] ' +
+    $('<div class="log-item log-' + topic + '">[' + topic + '] ' +
         message +
         '</div>').appendTo("#log-column");
+    $("#log-column").scrollTop($("#log-column")[0].scrollHeight);
 }
 
 function setupHandlers() {

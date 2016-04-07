@@ -5,6 +5,7 @@ html, body {
 
 body {
     margin: 0;
+    padding: 0;
 }
 
 #content-area {
@@ -17,7 +18,7 @@ body {
 }
 
 .console-column {
-    width: 75%;
+    width: 66%;
     border-right: 1px solid #888;
     overflow: auto;
     height: auto;
@@ -31,6 +32,11 @@ body {
     height: auto;
     flex: 1;
     padding-left: 10px;
+    font-family: monospace;
+}
+
+.log-item:nth-child(odd) {
+    background-color: #1B1D29;
 }
 
 .message {
